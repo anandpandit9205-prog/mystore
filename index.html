@@ -1,20 +1,55 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>LED Store</title>
+  <title>Anand LED Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial; margin:0; background:#f5f5f5; text-align:center; }
+    header { background:#232f3e; color:white; padding:15px; font-size:24px; }
+    .box {
+      background:white; margin:20px; padding:20px;
+      border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.2);
+    }
+    img { width:200px; }
+    button {
+      padding:12px; margin:5px; border:none;
+      width:200px; border-radius:5px;
+      font-size:16px; cursor:pointer;
+    }
+    .buy { background:green; color:white; }
+    .wa { background:#25D366; color:white; }
+    .call { background:#007bff; color:white; }
+  </style>
 </head>
-<body style="font-family: Arial; text-align: center;">
 
-  <h1>💡 LED Bulb Store</h1>
+<body>
 
+<header>💡 Anand LED Store</header>
+
+<div class="box">
+  <img src="https:///200">
   <h2>LED Bulb 9W</h2>
-  <img src="https://via.placeholder.com/150"><br><br>
+  <p>Energy saving bulb - high brightness</p>
+  <h3>₹49</h3>
 
-  <p>Price: ₹99</p>
-
-  <a href="https://wa.me/917303810329?text=I want to buy LED Bulb">
-    <button>Order on WhatsApp</button>
+  <button class="buy" onclick="pay()">Buy Now</button><br>
+  <button class="wa" onclick="whatsapp()">WhatsApp</button><br>
+  <a href="tel:7303810329">
+    <button class="call">Call Now</button>
   </a>
+</div>
+
+<script>
+function pay(){
+  window.open("upi://pay?pa=YOURUPI@upi&pn=AnandStore&am=120");
+}
+
+function whatsapp(){
+  let phone = "917303810329";
+  let msg = "I want to order LED Bulb 9W";
+  window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(msg));
+}
+</script>
 
 </body>
 </html>
