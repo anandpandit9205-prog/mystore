@@ -5,32 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: Arial; margin:0; background:#f5f5f5; text-align:center; }
-    header { background:#232f3e; color:white; padding:15px; font-size:24px; }
+    
+    header {
+      background:#232f3e;
+      color:white;
+      padding:10px;
+    }
+
+    .logo {
+      width:70px;
+      border-radius:50%;
+      vertical-align:middle;
+    }
+
+    .title {
+      font-size:22px;
+      margin-left:10px;
+      vertical-align:middle;
+    }
+
     .box {
-      background:white; margin:20px; padding:20px;
-      border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.2);
+      background:white;
+      margin:20px;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 2px 5px rgba(0,0,0,0.2);
     }
-    img { width:200px; }
+
+    img.product { width:200px; }
+
     button {
-      padding:12px; margin:5px; border:none;
-      width:200px; border-radius:5px;
-      font-size:16px; cursor:pointer;
+      padding:12px;
+      margin:5px;
+      border:none;
+      width:200px;
+      border-radius:5px;
+      font-size:16px;
+      cursor:pointer;
     }
+
     .buy { background:green; color:white; }
     .wa { background:#25D366; color:white; }
     .call { background:#007bff; color:white; }
+
   </style>
 </head>
 
 <body>
 
-<header>💡 Anand LED Store</header>
+<header>
+  <img src="" class="logo">
+  <span class="title">Anand LED Store</span>
+</header>
 
 <div class="box">
-  <img src="https://photos.app.goo.gl/YkjBnNTfEcfcoEvFA/200">
+  <img src="https://m.media-amazon.com/images/I/61LtuGzXeaL._SL1500_.jpg" class="product">
   <h2>LED Bulb 9W</h2>
-  <p>Energy saving bulb - high brightness</p>
-  <h3>₹49</h3>
+  <p>High brightness energy saving bulb</p>
+  <h3>₹120</h3>
 
   <button class="buy" onclick="pay()">Buy Now</button><br>
   <button class="wa" onclick="whatsapp()">WhatsApp</button><br>
